@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betting Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Betting Page (Mon–Fri Only)</h2>
+
+    <div class="info-box">
+        <p><strong>Account:</strong> <span id="username">Player001</span></p>
+        <p><strong>Credits:</strong> ₱<span id="credits">200</span></p>
+    </div>
+
+    <div class="bet-box">
+        <h3>Place Your Bet</h3>
+        <p>Minimum & Fixed Bet: <strong>₱20</strong></p>
+
+        <button id="betBtn" class="btn">Place Bet</button>
+
+        <p id="statusMessage"></p>
+    </div>
+
+</div>
+
+<script>
+    // Mock data (replace later with backend)
+    let credits = 200;
+
+    const betBtn = document.getElementById("betBtn");
+    const statusMessage = document.getElementById("statusMessage");
+    const creditsDisplay = document.getElementById("credits");
+
+    // Check if today is Monday–Friday
+    function isWeekday() {
+        const day = new Date().getDay();
+        return day >= 1 && day <= 5;  // 1=Mon, 5=Fri
+    }
+
+    betBtn.addEventListener("click", function () {
+        if (!isWeekday()) {
+            statusMessage.innerHTML = "❌ Betting is only allowed Monday to Friday.";
+            statusMessage.style.color = "red";
+            return;
+        }
+
+        if (credits < 20) {
+            statusMessage.innerHTML = "❌ Insufficient credits. Please top up.";
+            statusMessage.style.color = "red";
+            return;
+        }
+
+        credits -= 20;
+        creditsDisplay.textContent = credits;
+
+        statusMessage.innerHTML = "✅ Bet placed successfully!";
+        statusMessage.style.color = "green";
+    });
+</script>
+
+</body>
+</html>

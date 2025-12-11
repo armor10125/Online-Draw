@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Saturday Draw</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">🎥 Saturday Live Draw Panel</h1>
+
+    <div class="grid">
+
+        <!-- LIVESTREAM PANEL -->
+        <div class="live-box">
+            <h2>Livestream Placeholder</h2>
+
+            <!-- EMBED ANY LIVESTREAM HERE -->
+            <div class="video-frame">
+                <p>Live stream will appear here</p>
+                <!-- Example (replace URL when ready):
+                <iframe src="https://www.youtube.com/watch?v=VDk2oXn8jaE"
+                        frameborder="0" allowfullscreen></iframe>
+                -->
+            </div>
+        </div>
+
+        <!-- CONTROL PANEL -->
+        <div class="controls-box">
+            <h2>Admin Controls</h2>
+
+            <button class="btn" onclick="startDraw()">Start Draw</button>
+
+            <div id="resultBox" class="result-box">
+                <h3>Draw Result</h3>
+                <p id="resultText">Waiting for draw...</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function startDraw() {
+    document.getElementById("resultText").innerText = "Drawing... please wait 🎲";
+    
+    setTimeout(() => {
+        // Demo random winner
+        let winner = "Player" + Math.floor(Math.random() * 9999);
+        let prize = Math.floor(Math.random() * 5000) + 1000;
+
+        document.getElementById("resultText").innerHTML =
+            `<strong>Winner:</strong> ${winner}<br>
+             <strong>Prize:</strong> ₱${prize}`;
+    }, 2000);
+}
+</script>
+
+</body>
+</html>

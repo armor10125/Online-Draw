@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* LOGIN CARD */
+.login-card {
+    background: rgba(15, 15, 15, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #ffcc00;
+    box-shadow: 0 0 20px #ffcc00;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* ADMIN BADGE */
+.badge {
+    background: #ffcc00;
+    color: #000;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+/* TITLE */
+.title {
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    font-size: 15px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e6b800;
+    box-shadow: 0 0 15px #ffcc00;
+}
+
+/* ERROR MESSAGE */
+.error {
+    color: #ff4444;
+    margin-top: 10px;
+    min-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casino Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="logo">
+        <i class="fa-solid fa-dice fa-2x"></i>
+        <span>CASINO+</span>
+    </div>
+
+    <a class="menu-item active"><i class="fa-solid fa-house"></i> Dashboard</a>
+    <a class="menu-item"><i class="fa-solid fa-coins"></i> Wallet</a>
+    <a class="menu-item"><i class="fa-solid fa-dice"></i> Games</a>
+    <a class="menu-item"><i class="fa-solid fa-user"></i> Profile</a>
+    <a class="menu-item"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>🎰 Welcome to Casino+</h1>
+        <div class="user-credit">
+            <i class="fa-solid fa-coins"></i> <span id="credit">1500</span> Credits
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+
+        <div class="card neon-card" onclick="flashCard(this)">
+            <i class="fa-solid fa-dice fa-3x icon"></i>
+            <h3>Dice Roll</h3>
+            <p>Try your luck rolling the dice!</p>
+            <button class="play-btn">Play</button>
+        </div>
+
+        <div class="card neon-card" onclick="flashCard(this)">
+            <i class="fa-solid fa-coins fa-3x icon"></i>
+            <h3>Jackpot Wheel</h3>
+            <p>Spin the wheel and win big!</p>
+            <button class="play-btn">Spin</button>
+        </div>
+
+        <div class="card neon-card" onclick="flashCard(this)">
+            <i class="fa-

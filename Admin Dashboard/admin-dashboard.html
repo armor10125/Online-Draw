@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>ADMIN</h2>
+        <ul>
+            <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="admin-draw.html">Draw Page</a></li>
+            <li><a href="admin-security.html">Security Settings</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <h1>Dashboard Overview</h1>
+
+        <div class="stats-container">
+            <div class="card">
+                <h3>Total Players</h3>
+                <p id="players-count">1,248</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Bets Today</h3>
+                <p id="bets-today">₱24,560</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Earnings</h3>
+                <p id="total-earnings">₱102,350</p>
+            </div>
+        </div>
+
+        <div class="log-section">
+            <h2>System Logs</h2>
+            <div class="log-box">
+                <p>[12:40] Player #392 placed ₱20 bet</p>
+                <p>[12:39] New account registered: user_889</p>
+                <p>[12:37] Admin logged in</p>
+                <p>[12:35] Player #109 won ₱300</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

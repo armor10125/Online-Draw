@@ -1,0 +1,87 @@
+/* Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 380px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+header h1 {
+    color: #ffcc00;
+    text-shadow: 0 0 15px #ffcc00;
+    margin: 15px 0 5px;
+}
+
+header p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Credits Box */
+.credit-box {
+    background: rgba(20, 20, 20, 0.85);
+    border: 2px solid #ffcc00;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px #ffcc00;
+    margin-bottom: 25px;
+}
+
+.credit-box h2 {
+    margin: 0;
+    color: #ffcc00;
+}
+
+#creditAmount {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 0 0 10px #ffcc00;
+}
+
+/* Menu Buttons */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-buttons button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #222;
+    color: #fff;
+    border: 1px solid #555;
+    transition: 0.3s;
+}
+
+.menu-buttons button:hover {
+    background: #ffcc00;
+    color: #000;
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+.logout {
+    background: #7d0000 !important;
+    border-color: #ff5555 !important;
+}
+
+.logout:hover {
+    background: #ff3333 !important;
+    color: #fff !important;
+    box-shadow: 0 0 10px #ff0000;
+}

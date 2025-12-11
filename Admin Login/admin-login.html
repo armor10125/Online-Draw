@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Secure Login</title>
+    <link rel="stylesheet" href="admin-login.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="login-card">
+        <div class="badge">ADMIN ACCESS</div>
+
+        <h1 class="title">🔐 Secure Login Portal</h1>
+        <p class="subtitle">Authorized personnel only</p>
+
+        <form onsubmit="return adminLogin(event)">
+
+            <label>Admin Username</label>
+            <input type="text" id="adminUser" placeholder="Enter username" required>
+
+            <label>Password</label>
+            <input type="password" id="adminPass" placeholder="Enter password" required>
+
+            <p id="error" class="error"></p>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+function adminLogin(event) {
+    event.preventDefault();
+
+    let user = document.getElementById("adminUser").value;
+    let pass = document.getElementById("adminPass").value;
+
+    // Placeholder validation (replace with backend API later)
+    if (user === "admin" && pass === "123456") {
+        window.location.href = "admin-draw.html";  // Redirect to draw page
+    } else {
+        document.getElementById("error").innerText = "Invalid username or password!";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Credits</title>
+    <link rel="stylesheet" href="topup.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">💰 Top-Up Credits</h1>
+
+    <div class="credit-box">
+        <label>Select Amount</label>
+        <div class="amount-buttons">
+            <button onclick="setAmount(50)">₱50</button>
+            <button onclick="setAmount(100)">₱100</button>
+            <button onclick="setAmount(200)">₱200</button>
+        </div>
+
+        <input type="number" id="customAmount" placeholder="Enter custom amount" min="1">
+
+        <label>Payment Method</label>
+        <select id="paymentMethod">
+            <option value="gcash">GCash</option>
+            <option value="bank">Bank Transfer</option>
+        </select>
+
+        <label>Reference Number (Mock Only)</label>
+        <input type="text" id="refNum" placeholder="Enter payment reference">
+
+        <button class="btn" onclick="submitTopUp()">Confirm Top-Up</button>
+
+        <button class="back-btn" onclick="goBack()">⬅ Back to Dashboard</button>
+
+    </div>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+function setAmount(value) {
+    document.getElementById("customAmount").value = value;
+}
+
+function submitTopUp() {
+    let amount = document.getElementById("customAmount").value;
+    let payment = document.getElementById("paymentMethod").value;
+    let ref = document.getElementById("refNum").value;
+
+    if (!amount || amount <= 0) {
+        document.getElementById("message").innerText = "Please enter a valid amount.";
+        return;
+    }
+    if (!ref) {
+        document.getElementById("message").innerText = "Please enter a reference number.";
+        return;
+    }
+
+    // Mock logic – update localStorage
+    let credits = Number(localStorage.getItem("credits") || 0);
+    credits += Number(amount);
+    localStorage.setItem("credits", credits);
+
+    document.getElementById("message").innerText = 
+        "Top-up successful! Added ₱" + amount + " via " + payment.toUpperCase() + ".";
+
+    setTimeout(() => {
+        window.location.href = "dashboard.html";
+    }, 1500);
+}
+
+function goBack() {
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>

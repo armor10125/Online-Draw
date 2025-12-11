@@ -1,0 +1,138 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    background: #111;
+    height: 100vh;
+    padding-top: 20px;
+    box-shadow: 0 0 20px #ffcc00;
+    position: fixed;
+    left: 0;
+}
+
+.logo {
+    text-align: center;
+    font-size: 22px;
+    color: #ffcc00;
+    margin-bottom: 25px;
+}
+
+.logo i {
+    margin-right: 5px;
+}
+
+.menu-item {
+    display: block;
+    padding: 15px 20px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu-item i {
+    margin-right: 10px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background: #ffcc00;
+    color: #000;
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+/* MAIN CONTENT */
+.main {
+    margin-left: 240px;
+    padding: 25px;
+    width: calc(100% - 240px);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-credit {
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid #ffcc00;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+/* CARDS SECTION */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #1a1a1a;
+    border-radius: 18px;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #333;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.neon-card {
+    border: 2px solid #ffcc00;
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ffcc00;
+}
+
+.icon {
+    margin-bottom: 12px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00;
+}
+
+/* BUTTON INSIDE CARD */
+.play-btn {
+    margin-top: 12px;
+    padding: 10px 20px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    background: #e6b800;
+    box-shadow: 0 0 15px #ffcc00;
+}
+
+/* FLASH ANIMATION */
+@keyframes flash {
+    0% { box-shadow: 0 0 30px #ffcc00; }
+    50% { box-shadow: 0 0 5px #ffcc00; }
+    100% { box-shadow: 0 0 30px #ffcc00; }
+}
+
+.flash-effect {
+    animation: flash 0.6s;
+}

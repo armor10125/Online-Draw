@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🎰 Welcome, Player!</h1>
+        <p>Your Casino Dashboard</p>
+    </header>
+
+    <div class="credit-box">
+        <h2>💳 Credits</h2>
+        <div id="creditAmount">₱0</div>
+    </div>
+
+    <div class="menu-buttons">
+        <button onclick="topUp()">💰 Top Up</button>
+        <button onclick="placeBet()">🎯 Place Bet</button>
+        <button onclick="myBets()">📜 My Bets</button>
+        <button class="logout" onclick="logout()">🚪 Logout</button>
+    </div>
+
+</div>
+
+<script>
+// Placeholder JavaScript (connect to backend later)
+document.getElementById("creditAmount").innerText = "₱" + (localStorage.getItem("credits") || "0");
+
+function topUp() {
+    alert("Redirect to Top-up Page");
+}
+
+function placeBet() {
+    alert("Redirect to Betting Page");
+}
+
+function myBets() {
+    alert("Redirect to My Bets Page");
+}
+
+function logout() {
+    alert("Logging out...");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
